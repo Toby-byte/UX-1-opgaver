@@ -1,0 +1,13 @@
+/* giver bagrundsfaven sort, 
+hvid skrift og
+noget padding til lave en firkant til bagrunden */
+legend {
+    background-color: black;
+    color: white;
+    padding: 3px 5px;
+}
+
+/* afstand med fieldsets */
+fieldset {
+    margin: 2%;
+}
