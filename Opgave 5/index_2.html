@@ -12,15 +12,20 @@
       <ul>
         <li>
           <label for="Username">Username:</label>
-          <input type="text" name="name" id="name" pattern="\w{1}" required>
+          <!-- any letter followed by a . and 3 letters or numbers -->
+          <input type="text" name="name" id="name" pattern="[a-z]\.[a-z0-9]{3,}" required>
         </li>
         <li>
           <label for="tlf">Phone number:</label>
-          <input type="tel" name="tlf" id="tlf" minlength="8" maxlength="15" required>
+          <!-- phone numbers that are 10 digits in a row -->
+          <!-- or in the format of three digits, followed by three digits, then four digits, with each group separated by a space, dash, or dot. -->
+          <!-- "|" means or  -->
+          <input type="tel" name="tlf" id="tlf" pattern="[0-9]{10}|[0-9]{3}[ -.][0-9]{3}[ -.][0-9]{4}" required>
         </li>
         <li>
           <label for="email">E-mail:</label>
-          <input type="email" name="email" id="email" required>
+          <!-- 1 or more lower, upper or number followed by @bigcorp then a . followed by eu -->
+          <input type="email" name="email" id="email" pattern="[a-zA-Z0-9]+@bigcorp\.eu" required>
         </li>
         <li>
           <label for="comment">Comment:</label>
